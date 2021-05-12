@@ -4,7 +4,7 @@ from base_selenium_test import BrowserTestCase
 from pages.home import Home
 from pages.listings import Listings
 from enums.listing_categories import Categories
-from enums.listing_sub_categories import Antiques
+from enums.listing_sub_categories import Computers
 
 
 @pytest.mark.ui
@@ -18,8 +18,8 @@ class TestGeneralSearch(BrowserTestCase):
 
     def test_should_return_search_results_given_a_category_and_a_search_string(self):
         self.home.open()
-        self.home.open_main_category(Categories.Antiques)
-        self.home.open_sub_category(Antiques.Stamps)
+        self.home.open_main_category(Categories.Computers)
+        self.home.open_sub_category(Computers.Laptops)
         self.home.search('product')
 
         assert self.listings.total_listings() >= 0

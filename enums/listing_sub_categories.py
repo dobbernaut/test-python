@@ -23,3 +23,9 @@ class Antiques:
     TextilesLinen = 'Textiles & linen'
     Tobacco = 'Tobacco related'
     Other = 'Other'
+
+
+class Computers:
+    Components = 'Components'
+    Desktops = 'Desktops'
+    Laptops = 'Laptops'

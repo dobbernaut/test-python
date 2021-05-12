@@ -16,7 +16,7 @@ class TestWatchlist(unittest.TestCase):
         cls.search = Search()
         cls.my_trade_me = MyTradeMe()
 
-        response = cls.search.general('0187-4383-', 'product')
+        response = cls.search.general('0002-', 'product')
         if response:
             cls.listing_id = JSONToDictionary(response.text).List[0].ListingId
         if not cls.listing_id:

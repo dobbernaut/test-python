@@ -5,7 +5,7 @@ from pages.home import Home
 from pages.listings import Listings
 from pages.watchlist import Watchlist
 from enums.listing_categories import Categories
-from enums.listing_sub_categories import Antiques
+from enums.listing_sub_categories import Computers
 import config
 
 
@@ -27,8 +27,8 @@ class TestWatchlist(BrowserTestCase):
         self.home.log_out()
 
     def test_should_add_a_listing_to_the_user_watchlist(self):
-        self.home.open_main_category(Categories.Antiques)
-        self.home.open_sub_category(Antiques.Stamps)
+        self.home.open_main_category(Categories.Computers)
+        self.home.open_sub_category(Computers.Laptops)
         self.home.search('product')
         listing_to_add = self.listings.get_listings()[0]
         self.listings_to_remove.append(listing_to_add)
