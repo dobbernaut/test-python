@@ -8,8 +8,8 @@ def get_password():
 
 
 def get_username():
-    if os.getenv('username'):
-        return os.getenv('username')
+    if os.getenv('testuser'):
+        return os.getenv('testuser')
     raise AttributeError('No username was set for the test role. Add environment variable username')
 
 
